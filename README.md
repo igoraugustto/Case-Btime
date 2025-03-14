@@ -5,8 +5,6 @@ Este projeto realiza web scraping de produtos da Amazon utilizando Selenium e co
 
 
 📂 Estrutura do Projeto
-
-C:\Users\Igor\Desktop\scraper_project\src
 │── application
 │   ├── use_cases
 │   │   ├── scrape_amazon.py  # Web Scraping da Amazon
