@@ -26,7 +26,7 @@ class AmazonScraper:
             title_elements = wait.until(EC.presence_of_all_elements_located((By.TAG_NAME, "h2")))
             title = title_elements[1].text.strip() if len(title_elements) > 1 else "N/A"
 
-    # 🔹 Captura o preço (primeiro elemento da lista com a classe específica)
+    
             price_elements = wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, "_cDEzb_p13n-sc-price_3mJ9Z")))
             price = price_elements[0].text.strip() if price_elements else "N/A"
 

@@ -6,20 +6,20 @@ import csv
 
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
-# Função para salvar um produto em CSV
+
 def salvar_em_csv(nome_arquivo, produto):
-    if produto is None:  # Verifica se produto está vazio
+    if produto is None:
         print(f"⚠️ Erro: Produto inválido. Não foi possível salvar em {nome_arquivo}.")
         return
 
     with open(nome_arquivo, mode="a", newline="", encoding="utf-8") as arquivo:
         escritor = csv.writer(arquivo)
 
-        # Escreve o cabeçalho se o arquivo estiver vazio
+
         if arquivo.tell() == 0:
             escritor.writerow(["Título", "Preço", "Disponibilidade"])
 
-        # Corrigindo para acessar atributos corretamente
+
         escritor.writerow([produto.title, produto.price, produto.availability])
 
 if __name__ == "__main__":
